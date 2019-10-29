@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Стас Руденко: тренер</title>
+    <meta name="description" content="персональный сайт Стаса Руденко тренера по фитнесу, Stas Rudenko fitness traner personal website">
+    <meta name="keywords" content="trainer, fitness, bodybuilding, exercises, crossfitness, almaty, kazakhstan, qazaqstan, gimnasium, gim, stas_trener, stas, тренер, стас, руденко, станислав, алматы, казахстан, тренажёр, тренажёрный зал, спортивный врач, диетолог, травматолог, алматы, казахстан, врач, фитнес, лфк, зож, клуб, лечение, зарядка, похудение, здоровье, гимнастика, физкультура, упражения, бодибилдинг, совет, зал, джим, тренировка, кроссфитнес">
+
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata|Rubik:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles-merged.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/custom.css'%}">
+
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.min.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <!-- START: header -->
+
+  <header role="banner" class="probootstrap-header">
+    <div class="container-fluid">
+        <a href="../../" class="probootstrap-logo">stastrener<span></span></a>
+
+        <a href="#" class="probootstrap-burger-menu visible-xs" ><i>Меню</i></a>
+        <div class="mobile-menu-overlay"></div>
+
+        <nav role="navigation" class="probootstrap-nav hidden-xs">
+          <ul class="probootstrap-main-nav">
+            <li><a href="../..//">Главная</a></li>
+            <li><a href="../../programs/">Упражнения</a></li>
+            <li><a href="../../gallery/">Галерея</a></li>
+            <li ><a href="../../about/">О себе</a></li>
+            <li><a href="../../contact/">Контакты</a></li>
+            <li><a href="../topics/">Вопросы</a></li>
+            <li><a href="../../products/">Книги</a></li>
+          </ul>
+          <ul class="probootstrap-header-social hidden-xs">
+<!--           <li><a href="#"><i class="icon-twitter"></i></a></li>
+            <li><a href="#"><i class="icon-facebook2"></i></a></li>
+-->
+            <li><a href="https://instagram.com/stas_trener"><i class="icon-instagram2"></i></a></li>
+          </ul>
+          <div class="extra-text visible-xs">
+            <a href="#" class="probootstrap-burger-menu"><i>Меню</i></a>
+            <h5>Мой инстаграм</h5>
+            <ul class="social-buttons">
+
+              <li><a href="#"><i class="icon-instagram2"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+    </div>
+  </header>
+  <!-- END: header -->
+
+  <!-- START: section -->
+  <section class="probootstrap-intro" style="background-image: url({% static 'img/notebook_920.jpg'%});" data-stellar-background-ratio="0.5">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center border-top">
+            <p></p>
+                <div class="container">
+                 <div class="row">
+                   <div class="col-md-12 text-center border-top">
+                     <p></p>
+                       <div class="row">
+                         <div class="col-md-12 text-center border-top">
+                           <p></p>
+                             <div class="row">
+                               <div class="col-md-12 text-center border-top">
+                                  <div class="row">
+                                    <div class="col-md-12 text-center border-top">
+                                      <p></p>
+                                        <div class="row">
+                                           <div class="col-md-12 text-center border-top">
+
+
+                                                   <h4 style="color: blue">Вопрос: {{ topic }}</h4>
+                                                      <hr>
+                                                      <ul>
+                                                      {% for entry in entries %}
+                                                      <li>
+                                                      <p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+                                                      <h4 style="color: navy">{{ entry.text|linebreaks }}</h4>
+                                                      </li>
+                                                      {% empty %}
+                                                      <li>
+                                                      There are no entries for this question yet.
+                                                      </li>
+                                                      {% endfor %}
+                                                      </ul>
+                                           </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                               </div>
+                             </div>
+                           </div>
+  </section>
+  <!-- END: section -->
+
+  <footer class="probootstrap-footer">
+      <div class="probootstrap-backtotop"><a href=" /" class="js-backtotop"><i class="icon-chevron-thin-up"></i></a></div>
+      <div class="container">
+      <div class="row mb50">
+        <div class="col-md-4">
+          <div class="probootstrap-footer-widget">
+            <h4>Для кого этот сайт:</h4>
+            <p>Сайт предназначен для тех, кто решил позаботиться о своём теле. Добро пожаловать! Конечно будет непросто. Однако дорогу осилит идущий. Успехов вам на этом пути!</p>
+            <!--p><a href="/">ВВЕРХ<i class="icon-chevron-thin-up"></i></a></p-->
+          </div>
+        </div>
+        <div class="col-md-4 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+             <h4>Контактная информация:</h4>
+             <ul class="probootstrap-contact-info">
+              <li><i class="icon-location2"></i> <span>62-3, Жайлы, Алматы, 050006</span></li>
+              <li><i class="icon-mail"></i><span>stas_trener@mail.ru</span></li>
+              <li><i class="icon-phone2"></i><span>+7(708)489-49-69</span></li>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-push-1">
+          <div class="probootstrap-footer-widget">
+            <h4>Перейти на страницу:</h4>
+            <ul class="probootstrap-footer-link float">
+
+              <li><a href="../">Главная</a></li>
+              <li><a href="../programs/">Упражнения</a></li>
+              <li><a href="../gallery/">Галерея</a></li>
+
+            </ul>
+            <ul class="probootstrap-footer-link float">
+              <li><a href="../about/">О себе</a></li>
+              <li><a href="../contact/">Контакты</a></li>
+              <li><a href="learning_logs/topics/">Вопросы</a></li>
+
+
+            </ul>
+          </div>
+        <!--div class="row mb10"-->
+        </div>
+
+      </div>
+       <div class="row">
+         <div class="col-md-12 text-center border-top">
+           <p class="mb0">&copy; Copyright 2017 <a href="https://uicookies.com/">uiCookies:Trainer</a>. All Rights Reserved. <br> Designed by <a href="https://uicookies.com">uicookies.com</a> Demo Images Unsplash.com &amp; Pexels.com</p>
+         </div>
+       </div>
+     </div>
+  </footer>
+
+  <script src="{% static 'js/scripts.min.js'%}"></script>
+  <script src="{% static 'js/main.min.js'%}"></script>
+  <script src="{% static 'js/custom.js'%}"></script>
+
+  </body>
+</html>
